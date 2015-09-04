@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title>Swapbot Stats</title>
+        <link rel="stylesheet" type="text/css" href="assets/lib/bootstrap/dist/css/bootstrap.min.css" />
+        <link rel="stylesheet" type="text/css" href="assets/css/keen-dashboards.css" />
+    </head>
+
+    <body class="application">
+        <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="./">Swapbot Stats</a>
+                </div>
+                <div class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav navbar-left">
+                        <li>
+                            <a href="https://swapbot.tokenly.com">Swapbot</a>
+                        </li>
+                        <li>
+                            <a href="http://www.tokenly.com">Tokenly</a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/tokenly/swapbot-keen-stats">Source</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid">
+            <!-- assets in -->
+            <div class="row">
+                <div class="col-sm-8">
+                    <div class="chart-wrapper">
+                        <div class="chart-title">
+                            Weekly Tokens In
+                        </div>
+                        <div class="chart-stage">
+                            <div id="chart-weekly-assets-in-column"></div>
+                        </div>
+                        <div class="chart-notes">
+                            Total number of swaps receiving these tokens.  This is not the number of Tokens received.
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="chart-wrapper">
+                        <div class="chart-title">
+                            Tokens In
+                        </div>
+                        <div class="chart-stage">
+                            <div id="chart-weekly-assets-in-pie"></div>
+                        </div>
+                        <div class="chart-notes">
+                            Total number of swaps receiving these tokens.  This is not the number of Tokens received.
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- assets out -->
+            <div class="row">
+                <div class="col-sm-8">
+                    <div class="chart-wrapper">
+                        <div class="chart-title">
+                            Weekly Tokens Out
+                        </div>
+                        <div class="chart-stage">
+                            <div id="chart-weekly-assets-out-column"></div>
+                        </div>
+                        <div class="chart-notes">
+                            Total number of swaps sending these tokens.  This is not the number of Tokens sent.
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="chart-wrapper">
+                        <div class="chart-title">
+                            Tokens Out
+                        </div>
+                        <div class="chart-stage">
+                            <div id="chart-weekly-assets-out-pie"></div>
+                        </div>
+                        <div class="chart-notes">
+                            Total number of swaps sending these tokens.  This is not the number of Tokens sent.
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- swaps out -->
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="chart-wrapper">
+                        <div class="chart-title">
+                            Swaps per Day
+                        </div>
+                        <div class="chart-stage">
+                            <div id="chart-daily-swaps-column"></div>
+                        </div>
+                        <div class="chart-notes">
+                            Number of Swaps per Day.
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+            <div class="row">
+                <div class="col-sm-4">
+                    <div class="chart-wrapper">
+                        <div class="chart-stage">
+                            <div id="chart-total-swaps"></div>
+                        </div>
+                        <div class="chart-notes">
+                            Total number of swaps.
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="chart-wrapper">
+                        <div class="chart-stage">
+                            <div id="chart-total-btc-in"></div>
+                        </div>
+                        <div class="chart-notes">
+                            Sum of all BTC received.  This does not include the value of any tokens received.
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="chart-wrapper">
+                        <div class="chart-stage">
+                            <div id="chart-total-btc-out"></div>
+                        </div>
+                        <div class="chart-notes">
+                            Sum of all BTC sent.  This does not include the value of any tokens sent.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript" src="assets/lib/jquery/dist/jquery.min.js"></script>
+        <script type="text/javascript" src="assets/lib/bootstrap/dist/js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="assets/lib/momentjs/moment.min.js"></script>
+
+        <script type="text/javascript" src="assets/lib/keen-js/dist/keen.min.js"></script>
+        <script type="text/javascript" src="assets/js/meta.js"></script>
+        <script type="text/javascript" src="includes/variables.js"></script>
+        <script type="text/javascript" src="keen.dashboard.js"></script>
+    </body>
+
+</html>
