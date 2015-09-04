@@ -12,7 +12,7 @@ Keen.ready(function(){
   // ----------------------------------------
 
   var assets_in_timeline = new Keen.Query("count", {
-    eventCollection: "stage-swap",
+    eventCollection: window.keenCollectionsPrefix+"swap",
     interval: "weekly",
     groupBy: "receipt.assetIn",
     timeframe: {
@@ -43,7 +43,7 @@ Keen.ready(function(){
   // Assets In Pie Chart
   // ----------------------------------------
   var assets_in_static = new Keen.Query("count", {
-    eventCollection: "stage-swap",
+    eventCollection: window.keenCollectionsPrefix+"swap",
     groupBy: "receipt.assetIn",
     timeframe: {
       start: "2015-06-01T00:00:00.000Z",
@@ -72,7 +72,7 @@ Keen.ready(function(){
   // ----------------------------------------
 
   var assets_out_timeline = new Keen.Query("count", {
-    eventCollection: "stage-swap",
+    eventCollection: window.keenCollectionsPrefix+"swap",
     interval: "weekly",
     groupBy: "receipt.assetOut",
     timeframe: {
@@ -103,7 +103,7 @@ Keen.ready(function(){
   // Assets Out Pie Chart
   // ----------------------------------------
   var assets_out_static = new Keen.Query("count", {
-    eventCollection: "stage-swap",
+    eventCollection: window.keenCollectionsPrefix+"swap",
     groupBy: "receipt.assetOut",
     timeframe: {
       start: "2015-06-01T00:00:00.000Z",
@@ -136,7 +136,7 @@ Keen.ready(function(){
   // ----------------------------------------
 
   var swaps_timeline = new Keen.Query("count", {
-    eventCollection: "stage-swap",
+    eventCollection: window.keenCollectionsPrefix+"swap",
     interval: "daily",
     timeframe: {
       start: "2015-06-01T00:00:00.000Z",
@@ -165,7 +165,7 @@ Keen.ready(function(){
   // ----------------------------------------
 
   var swaps_total = new Keen.Query("count", {
-    eventCollection: "stage-swap",
+    eventCollection: window.keenCollectionsPrefix+"swap",
     timeframe: {
       start: "2015-06-01T00:00:00.000Z",
       end: endOfToday
@@ -183,7 +183,7 @@ Keen.ready(function(){
   // ----------------------------------------
 
   var btc_in_total = new Keen.Query("sum", {
-    eventCollection: "stage-swap",
+    eventCollection: window.keenCollectionsPrefix+"swap",
     targetProperty: "inBTCValue",
     timeframe: {
       start: "2015-06-01T00:00:00.000Z",
@@ -203,7 +203,7 @@ Keen.ready(function(){
   // ----------------------------------------
 
   var btc_out_total = new Keen.Query("sum", {
-    eventCollection: "stage-swap",
+    eventCollection: window.keenCollectionsPrefix+"swap",
     targetProperty: "outBTCValue",
     timeframe: {
       start: "2015-06-01T00:00:00.000Z",
